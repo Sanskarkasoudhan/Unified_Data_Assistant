@@ -1,6 +1,6 @@
 # Unified Data Assistant
 
-📊 **Unified Data Assistant** is a comprehensive tool designed to process, analyze, and query data from multiple sources, including CSV files, Excel files, and PDFs. It leverages advanced technologies like **Retrieval-Augmented Generation (RAG), Chroma, and FAISS** to provide intelligent insights and seamless querying across interrelated datasets.
+📊 **Unified Data Assistant** is a comprehensive tool designed to process, analyze, and query data from multiple sources, including CSV files, Excel files, and PDFs. It leverages advanced technologies like *Retrieval-Augmented Generation (RAG)*, *Chroma*, *FAISS*, *SQLite*, and *LangChain SQL Agent* to provide intelligent insights and seamless querying across interrelated datasets.
 
 ## Features
 
@@ -12,7 +12,8 @@
 ### Natural Language Querying
 - Ask questions in plain English and retrieve answers from the database.
 - Supports queries across interrelated tables using inferred relationships.
-- Leverages Retrieval-Augmented Generation (RAG) for document-based queries.
+- Leverages **Retrieval-Augmented Generation (RAG)** for document-based queries.
+- Uses LangChain SQL Agent for efficient SQL-based querying.
 
 ### Visualization
 - Dynamically generate visualizations based on query results.
@@ -28,6 +29,7 @@
 - **Chroma**: Vector database for managing embeddings and retrieval.
 - **Google Generative AI (Gemini API)**: Advanced natural language understanding.
 - **LangChain**: Framework for building language model-powered applications.
+- **LangChain SQL Agent**: Enables natural language to SQL query conversion for structured databases.
 
 ## Tech Stack
 
@@ -37,6 +39,7 @@
 - **LangChain**: Framework for natural language processing and querying.
 - **FAISS**: Vector similarity search for document embeddings.
 - **Chroma**: Vector database for embedding storage and retrieval.
+- **LangChain SQL Agent**: Enables SQL-based querying through natural language.
 
 ### Frontend
 - **Streamlit**: Interactive UI for file uploads, querying, and visualization.
@@ -107,7 +110,11 @@ streamlit run app.py
 - Automatically detects relationships between tables (e.g., foreign keys).
 - Enables seamless querying across interrelated datasets.
 
-### 3. Visualization
+### 3. LangChain SQL Agent
+- Converts natural language queries into SQL queries for structured data.
+- Enables querying large databases efficiently.
+
+### 4. Visualization
 - Dynamically generates visualizations based on query results.
 - Supports custom visualization scripts for advanced use cases.
 
@@ -116,7 +123,7 @@ For questions or support, please contact:
 
 - **Name**: Sanskar
 - **Email**: indiansanskar2000@gmail.com
-- **GitHub**: https://github.com/Sanskarkasoudhan
+- **GitHub**: [Sanskarkasoudhan](https://github.com/Sanskarkasoudhan)
 
 ---
 
