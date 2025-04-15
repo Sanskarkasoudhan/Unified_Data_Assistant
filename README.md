@@ -1,7 +1,5 @@
 📊 **Unified Data Assistant** is a comprehensive tool designed to process, analyze, and query data from multiple sources, including CSV files, Excel files, and PDFs. It leverages advanced technologies like *Retrieval-Augmented Generation (RAG)*, *Chroma*, *FAISS*, *SQLite*, and *LangChain SQL Agent* to provide intelligent insights and seamless querying across interrelated datasets.
 
-![Data Assistant Banner](https://via.placeholder.com/800x200)
-
 ## How It Works
 
 The Unified Data Assistant operates through two main processing pipelines:
@@ -154,49 +152,11 @@ streamlit run app.py
 - Dynamically generates visualizations based on query results
 - Supports custom visualization scripts for advanced use cases
 
-## Project Structure
-
-```
-Unified-Data-Assistant/
-├── app.py                      # Main Streamlit application
-├── config.py                   # Configuration file for API keys
-├── requirements.txt            # Dependencies
-├── README.md                   # Project documentation
-├── data/                       # Storage for uploaded files
-├── utils/
-│   ├── database.py             # SQLite database operations
-│   ├── pdf_processor.py        # PDF extraction and vector storage
-│   ├── csv_processor.py        # CSV/Excel processing
-│   ├── relationship_finder.py  # Table relationship inference
-│   ├── query_engine.py         # Natural language query processing
-│   └── visualizer.py           # Data visualization tools
-├── models/                     # Model configurations and agents
-│   ├── rag_model.py            # RAG implementation
-│   └── sql_agent.py            # LangChain SQL Agent setup
-└── vector_stores/              # Storage for vector embeddings
-```
-
 ## Contact
 For questions or support, please contact:
 
 - **Name**: Sanskar
 - **Email**: indiansanskar2000@gmail.com
 - **GitHub**: [Sanskarkasoudhan](https://github.com/Sanskarkasoudhan)
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 *For questions or support, please open an issue or contact the author directly.*
