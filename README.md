@@ -5,8 +5,9 @@
 ## Features
 
 ### Upload and Process Data
-- Upload individual files or folders containing multiple CSV files.
-- Automatically infer relationships between tables (e.g., foreign key relationships).
+- Upload individual files or folders containing multiple CSV files and pdf.
+- Once the Pdf file uploaded it will store in VectorDB or FAISS local index.
+- If CSV or XLSX file, it automatically infer relationships between tables (e.g., foreign key relationships).
 - Store data in an SQLite database for efficient querying.
 
 ### Natural Language Querying
