@@ -1,132 +1,138 @@
-# Unified Data Assistant
+📊 **Unified Data Assistant** is a comprehensive tool designed to process, analyze, and query data from multiple sources, including CSV files, Excel files, and PDFs. It leverages advanced technologies like Retrieval-Augmented Generation (RAG), Chroma, FAISS, SQLite, and LangChain SQL Agent to provide intelligent insights and seamless querying across interrelated datasets.
 
-📊 **Unified Data Assistant** is a comprehensive tool designed to process, analyze, and query data from multiple sources, including CSV files, Excel files, and PDFs. It leverages advanced technologies like *Retrieval-Augmented Generation (RAG)*, *Chroma*, *FAISS*, *SQLite*, and *LangChain SQL Agent* to provide intelligent insights and seamless querying across interrelated datasets.
+![Data Assistant Banner](https://via.placeholder.com/800x200)
 
-## Features
+## 🌟 Features
 
-### Upload and Process Data
-- Upload individual files or folders containing multiple CSV files and pdf.
-- Once the Pdf file uploaded it will store in VectorDB or FAISS local index.
-- If CSV or XLSX file, it automatically infer relationships between tables (e.g., foreign key relationships).
-- Store data in an SQLite database for efficient querying.
+### Data Processing
+- **Multiple File Types**: Process CSV, Excel (.xlsx, .xls), and PDF files
+- **Smart Relationship Detection**: Automatically infer relationships between tables (e.g., foreign key relationships)
+- **Dual Processing Pipeline**:
+  - **PDF Pipeline**: Extract text → Chunk → Convert to vectors → Store in FAISS or Chroma vector database
+  - **CSV/Excel Pipeline**: Process structured data → Store in SQLite database tables
 
-### Natural Language Querying
-- Ask questions in plain English and retrieve answers from the database.
-- Supports queries across interrelated tables using inferred relationships.
-- Leverages **Retrieval-Augmented Generation (RAG)** for document-based queries.
-- Uses LangChain SQL Agent for efficient SQL-based querying.
+### Intelligent Querying
+- **Natural Language Interface**: Ask questions in plain English
+- **Cross-Table Queries**: Seamlessly query across related datasets
+- **RAG Technology**: Retrieve relevant document snippets to augment AI responses
+- **LangChain SQL Agent**: Convert natural language to efficient SQL queries
 
 ### Visualization
-- Dynamically generate visualizations based on query results.
-- Supports custom visualization scripts.
+- **Dynamic Charts**: Generate visualizations based on query results
+- **Custom Visualization Scripts**: Support for advanced visualization needs
 
-### File Types Supported
-- **CSV**: Process and store CSV files as database tables.
-- **Excel**: Process `.xlsx` and `.xls` files.
-- **PDF**: Extract and analyze text from PDF documents.
-
-### Advanced Technologies
-- **FAISS**: Efficient vector search for document embeddings.
-- **Chroma**: Vector database for managing embeddings and retrieval.
-- **Google Generative AI (Gemini API)**: Advanced natural language understanding.
-- **LangChain**: Framework for building language model-powered applications.
-- **LangChain SQL Agent**: Enables natural language to SQL query conversion for structured databases.
-
-## Tech Stack
+## 🛠️ Tech Stack
 
 ### Backend
-- **Python**: Core programming language.
-- **SQLite**: Lightweight database for structured data storage.
-- **LangChain**: Framework for natural language processing and querying.
-- **FAISS**: Vector similarity search for document embeddings.
-- **Chroma**: Vector database for embedding storage and retrieval.
-- **LangChain SQL Agent**: Enables SQL-based querying through natural language.
+- **Python**: Core programming language
+- **SQLite**: Lightweight database for structured data
+- **LangChain**: Framework for natural language processing
+- **FAISS/Chroma**: Vector storage and similarity search
+- **Google Generative AI (Gemini API)**: Advanced language understanding
 
 ### Frontend
-- **Streamlit**: Interactive UI for file uploads, querying, and visualization.
+- **Streamlit**: Interactive UI for file uploads, querying, and visualization
 
-### APIs
-- **Google Generative AI (Gemini API)**: For advanced natural language understanding and embedding generation.
+## 📋 Prerequisites
 
-### Libraries
-- **PyPDF2**: For extracting text from PDF files.
-- **Pandas**: For data manipulation and processing.
-- **Matplotlib**: For generating visualizations.
-- **OpenAI Tools**: For SQL-based natural language queries.
+- Python 3.8+
+- Google Generative AI API key
 
-## Installation
+## 🚀 Getting Started
 
-### 1. Clone the Repository
-```sh
-git clone https://github.com/your-username/Unified-Data-Assistant.git
-cd Unified-Data-Assistant
-```
+### Installation
 
-### 2. Set Up a Virtual Environment
-```sh
-python -m venv venv
-source venv/bin/activate  # On macOS/Linux
-venv\Scripts\activate    # On Windows
-```
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/Unified-Data-Assistant.git
+   cd Unified-Data-Assistant
+   ```
 
-### 3. Install Dependencies
-```sh
-pip install -r requirements.txt
-```
+2. **Set up a virtual environment:**
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On macOS/Linux
+   venv\Scripts\activate     # On Windows
+   ```
 
-### 4. Configure API Keys
-Add your Google Generative AI (Gemini API) key to the `config.py` file:
-```python
-API_KEY = "your-gemini-api-key"
-```
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### 5. Run the Application
-```sh
-streamlit run app.py
-```
+4. **Configure API keys:**
+   Create a `config.py` file with your API key:
+   ```python
+   API_KEY = "your-gemini-api-key"
+   ```
 
-## Usage
+5. **Launch the application:**
+   ```bash
+   streamlit run app.py
+   ```
+
+## 🔍 Usage
 
 ### 1. Upload Data
-- Navigate to the **Upload** tab.
-- Upload individual files or a folder containing multiple CSV files.
-- The system will process the files, infer relationships, and store them in the SQLite database.
+- Navigate to the **Upload** tab
+- Upload individual files or entire folders
+- The system processes files and stores them appropriately
 
-### 2. Query Data
-- Navigate to the **Query** tab.
-- Select the data source (e.g., Document Store or SQL Database).
-- Enter your question in natural language (e.g., *"Show me all orders placed by customers in 2023"*).
-- View the results and any generated visualizations.
+### 2. Query Your Data
+- Go to the **Query** tab
+- Select data source (Document Store or SQL Database)
+- Enter questions in natural language
+- View results and visualizations
 
-### 3. Overview
-- Navigate to the **Overview** tab to see a summary of uploaded data and inferred relationships.
+### 3. Data Overview
+- Check the **Overview** tab for a summary of uploaded data and inferred relationships
 
-## Advanced Features
+## 📊 Example Queries
 
-### 1. Retrieval-Augmented Generation (RAG)
-- Combines document retrieval with generative AI to answer complex queries.
-- Uses embeddings stored in FAISS or Chroma for efficient retrieval.
+- "Show me all orders placed by customers in 2023"
+- "What are the top 5 products by revenue?"
+- "Summarize the key points from the annual report"
+- "Show the relationship between customer age and purchase amount"
 
-### 2. Relationship Inference
-- Automatically detects relationships between tables (e.g., foreign keys).
-- Enables seamless querying across interrelated datasets.
+## 🗂️ Project Structure
 
-### 3. LangChain SQL Agent
-- Converts natural language queries into SQL queries for structured data.
-- Enables querying large databases efficiently.
+```
+Unified-Data-Assistant/
+├── app.py                 # Main Streamlit application
+├── config.py              # Configuration file for API keys
+├── requirements.txt       # Dependencies
+├── README.md              # Project documentation
+├── data/                  # Storage for uploaded files
+├── utils/
+│   ├── database.py        # SQLite database operations
+│   ├── pdf_processor.py   # PDF extraction and vector storage
+│   ├── csv_processor.py   # CSV/Excel processing
+│   ├── query_engine.py    # Natural language query processing
+│   └── visualizer.py      # Data visualization tools
+└── models/                # Model configurations and agents
+```
 
-### 4. Visualization
-- Dynamically generates visualizations based on query results.
-- Supports custom visualization scripts for advanced use cases.
+## 📄 License
 
-## Contact
-For questions or support, please contact:
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
 
 - **Name**: Sanskar
 - **Email**: indiansanskar2000@gmail.com
 - **GitHub**: [Sanskarkasoudhan](https://github.com/Sanskarkasoudhan)
 
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
 ---
 
-*Let me know if you need further customization or additional details!* 🚀
+*For questions or support, please open an issue or contact the author directly.*
 
